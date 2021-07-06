@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1f89b472-ec58-41de-bb6b-bb1ac90a0532",
+      "username": "ninoc",
+      "emailAddress": "ninoc@magenic.com",
+      "firstName": "Nino",
+      "lastName": "Apelyido"
+    },
+    {
+      "id": "73e93151-d0f5-493d-afc0-6631a6370bce",
+      "username": "ninoce",
+      "emailAddress": "ninoce@example.com",
+      "firstName": "Nico",
+      "lastName": "Surunamae"
+    }
+  ]
+}
