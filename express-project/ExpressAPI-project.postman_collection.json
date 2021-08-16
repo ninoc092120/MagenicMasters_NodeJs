@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "84791f55-d2e0-45da-bdd6-a3fdf6e6d506",
+		"name": "ExpressAPI-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "getAllEvents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEventByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/7dcf7fc3-d21e-4224-a98b-ef7c71a65a6c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"7dcf7fc3-d21e-4224-a98b-ef7c71a65a6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchEvent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/search?eventname=Birthday&datestart=2021-06-14&dateend=2021-06-14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"search"
+							],
+							"query": [
+								{
+									"key": "eventname",
+									"value": "Birthday"
+								},
+								{
+									"key": "datestart",
+									"value": "2021-06-14"
+								},
+								{
+									"key": "dateend",
+									"value": "2021-06-14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exportEvent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/events/export?eventId=123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"",
+								"events",
+								"export"
+							],
+							"query": [
+								{
+									"key": "eventId",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postEvent-BD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\" : \"Birthday\",\r\n    \"eventType\" : \"National Celebration\",\r\n    \"startDateTime\" : \"2021-06-14\",\r\n    \"endDateTime\" : \"2021-06-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postEvent-DD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\" : \"Death Day\",\r\n    \"eventType\" : \"National Celebration\",\r\n    \"startDateTime\" : \"1896-12-30\",\r\n    \"endDateTime\" : \"1896-12-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEvent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"eventName\" : \"Birthday\",\r\n    \"eventType\" : \"Annual National Celebration\",\r\n    \"startDateTime\" : \"1861-06-19\",\r\n    \"endDateTime\" : \"1861-06-19\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/7dcf7fc3-d21e-4224-a98b-ef7c71a65a6c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"7dcf7fc3-d21e-4224-a98b-ef7c71a65a6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEvent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/events/f108b7b3-aebd-468c-b715-477a8050907e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"events",
+								"f108b7b3-aebd-468c-b715-477a8050907e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Members",
+			"item": [
+				{
+					"name": "getAllMembers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMemberById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/f89ba9fa-fdc6-406a-b31d-85e0aedf2ee4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"f89ba9fa-fdc6-406a-b31d-85e0aedf2ee4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchMember",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/members/search?name=Jose Rizal&status=Active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jose Rizal"
+								},
+								{
+									"key": "status",
+									"value": "Active"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postMember-JR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Jose Rizal\",\r\n    \"status\" : \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postMember-AB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Andres Bonifacio\",\r\n    \"status\" : \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMember",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Jose Rizal\",\r\n    \"status\" : \"In-active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/33ed0ec7-9b5e-41e5-a9d7-f769c9b716de",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"33ed0ec7-9b5e-41e5-a9d7-f769c9b716de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMember",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/members/541bbce2-a44e-4b28-b2d8-95761235d1e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"members",
+								"541bbce2-a44e-4b28-b2d8-95761235d1e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attendance",
+			"item": [
+				{
+					"name": "postAttendance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeIn\" : \"2020-08-16\",\r\n    \"timeOut\" : \"2020-08-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAttendance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"timeIn\" : \"2021-08-16\",\r\n    \"timeOut\" : \"2021-08-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/990da7d3-3b61-45e9-a697-f07bd8364d5e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"990da7d3-3b61-45e9-a697-f07bd8364d5e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAttendance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/attendance/43b046ac-d7cf-4b51-8c6a-b262544e8bec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"attendance",
+								"43b046ac-d7cf-4b51-8c6a-b262544e8bec"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
